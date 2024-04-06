@@ -64,5 +64,9 @@ SELECT AVG(price)
 FROM superstore
 WHERE category = 'Electronics';
 
-___
-
+# The average price of each kitchen supply 
+SELECT AVG(price), item_name, category
+FROM superstore
+WHERE category='Kitchen Supplies'
+GROUP BY item_name
+ORDER BY AVG(price) DESC;
